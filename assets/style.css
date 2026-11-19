@@ -1,0 +1,56 @@
+:root {
+  --bg: #0B1220; --panel: #111A2E; --border: #1E293B; --text: #E6EAF2; --muted: #94A3B8;
+  --teal: #14B8A6; --amber: #F59E0B; --red: #EF4444; --blue: #60A5FA;
+}
+html, body, [class*="css"] { font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; }
+.block-container { padding-top: 1.2rem; padding-bottom: 2rem; max-width: 1500px; }
+[data-testid="stSidebar"] { background: #0E1628; border-right: 1px solid var(--border); }
+h1, h2, h3 { letter-spacing: -0.01em; }
+h1 { font-size: 1.55rem !important; font-weight: 650 !important; }
+h3 { font-size: 1.05rem !important; font-weight: 600 !important; color: var(--text); }
+
+.onyx-wordmark { font-weight: 700; letter-spacing: .14em; font-size: .95rem; color: var(--text); }
+.onyx-wordmark span { color: var(--muted); font-weight: 500; letter-spacing: .02em; }
+
+.onyx-banner { border: 1px solid var(--border); background: rgba(245,158,11,.06); color: var(--muted);
+  font-size: .74rem; padding: 6px 12px; border-radius: 6px; margin-bottom: .8rem; }
+.onyx-banner b { color: var(--amber); font-weight: 600; }
+
+.kpi { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px 12px; min-height: 112px; }
+.kpi .label { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; }
+.kpi .value { font-size: 1.75rem; font-weight: 650; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.kpi .sub { color: var(--muted); font-size: .78rem; margin-top: 4px; }
+.kpi.teal { border-top: 2px solid var(--teal); } .kpi.amber { border-top: 2px solid var(--amber); }
+.kpi.red { border-top: 2px solid var(--red); } .kpi.blue { border-top: 2px solid var(--blue); }
+
+.badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: .72rem; font-weight: 600;
+  border: 1px solid transparent; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.badge.Healthy { background: rgba(20,184,166,.15); color: var(--teal); border-color: rgba(20,184,166,.4); }
+.badge.Monitor { background: rgba(245,158,11,.15); color: var(--amber); border-color: rgba(245,158,11,.4); }
+.badge.AtRisk { background: rgba(239,68,68,.15); color: var(--red); border-color: rgba(239,68,68,.4); }
+.badge.Missing { background: transparent; color: var(--muted); border: 1px dashed var(--muted); }
+.badge.Neutral { background: rgba(148,163,184,.12); color: var(--muted); border-color: var(--border); }
+.badge.Info { background: rgba(96,165,250,.12); color: var(--blue); border-color: rgba(96,165,250,.35); }
+
+.panel { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; margin-bottom: 10px; }
+.panel h4 { margin: 0 0 6px 0; font-size: .9rem; color: var(--text); }
+.answer-tile { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; height: 100%; }
+.answer-tile .q { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 650; margin-bottom: 6px; }
+.answer-tile .row { font-size: .82rem; color: var(--muted); padding: 4px 0; border-bottom: 1px solid var(--border); }
+.answer-tile .row b { color: var(--text); font-weight: 600; }
+.muted { color: var(--muted); font-size: .82rem; }
+.warn { border: 1px solid rgba(239,68,68,.5); background: rgba(239,68,68,.08); color: #FCA5A5; padding: 10px 14px;
+  border-radius: 8px; font-weight: 600; margin: 6px 0 10px; }
+.booked { border-left: 3px solid var(--teal); padding-left: 10px; }
+.pipeline { border-left: 3px dashed var(--amber); padding-left: 10px; }
+.ai-label { color: var(--amber); font-size: .74rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+.timeline-item { border-left: 2px solid var(--border); padding: 2px 0 10px 12px; margin-left: 4px; font-size: .84rem; }
+.timeline-item .t { color: var(--muted); font-size: .74rem; }
+.kanban-col { background: #0E1628; border: 1px solid var(--border); border-radius: 8px; padding: 8px; min-height: 120px; }
+.kanban-head { font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 6px; }
+.stepper { display: flex; gap: 6px; flex-wrap: wrap; margin: 4px 0 10px; }
+.stepper .s { font-size: .74rem; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
+.stepper .s.done { border-color: rgba(20,184,166,.5); color: var(--teal); }
+.stepper .s.cur { border-color: var(--amber); color: var(--amber); font-weight: 600; }
+[data-testid="stDataFrame"] { font-variant-numeric: tabular-nums; }
+@media (max-width: 900px) { .kpi .value { font-size: 1.35rem; } }
